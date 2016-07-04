@@ -1,0 +1,44 @@
+<div id="newBox">
+	<h2>記事の編集</h2>
+
+	<% if @article.errors.any? %>
+	  <div id="errorBox">
+	    <h3><%= @article.errors.count %>件のエラーがあります。</h3>
+	 
+	    <ul>
+	    <% @article.errors.full_messages.each do |msg| %>
+	      <li><%= msg %></li>
+	    <% end %>
+	    </ul>
+	  </div>
+	<% end %>
+
+  <dl>
+	  <%= form_for @article do |f| %>
+	  	<dt><%= f.label :タイトル %></dt>
+	    <dd><%= f.text_field :title %></dd>
+	   
+	    <dt><%= f.label :日付 %></dt>
+	    <dd><%= f.date_select :date, :use_month_unmbers => true %></dd>
+
+	    <dt><%= f.label :エリア %></dt>
+	    <dd><%= f.select :area , @prefs.map{|pref| [pref.ken]} %></dd>
+	  
+	    <dt><%= f.label :場所 %></dt>
+	    <dd><%= f.text_field :place %></dd>
+
+	    <dt><%= f.label :ジャンル %></dt>
+	    <dd><%= f.text_field :genre %></dd>
+	    
+	    <dt><%= f.label :ノルマ %></dt>
+	    <dd><%= f.text_field :norma %></dd>
+
+	    <dt><%= f.label :詳細 %></dt>
+	    <dd><%= f.text_area :detail, size: "70x10" %></dd>
+	    
+	    <%= button_tag type:"submit" do %>
+	      投稿する
+	    <% end %>
+	  <% end %>
+	</dl>
+</div>

@@ -1,0 +1,18 @@
+<div id="usersArticleBox">
+	<h2>投稿した記事の管理</h2>
+	<dl>
+		<% @articles.each do |article| %>
+		<dt><a href="/articles/<%= article.id %>"><%= article.title %></a></dt>
+		<dd>
+		  <%= link_to "編集", "/articles/#{article.id}/edit"  , method: :get %>
+		  <%= link_to "削除", "/articles/#{article.id}" , method: :delete %>
+		</dd>
+		<% end %>
+	</dl>
+
+  <div class="clearfix">
+ 		<%= paginate(@articles) %>
+  </div>
+</div>
+
+

@@ -1,0 +1,40 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :メールアドレス %><br />
+    <%= f.email_field :email, placeholder: "メールアドレスを入力（必須）", autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :パスワード %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, placeholder: "パスワードを入力（必須）",autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :パスワードを確認 %><br />
+    <%= f.password_field :password_confirmation, placeholder: "パスワードの再確認", autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :名前 %><br />
+    <%= f.text_field :name, placeholder: "名前を入力（必須）"  %>
+  </div>
+  <div class="field">
+    <%= f.label :アバター %><br />
+    <%= f.file_field :avatar %>
+  </div>
+
+
+  <div class="actions">
+    <br />
+    <%= f.submit "新規登録" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

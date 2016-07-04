@@ -1,0 +1,210 @@
+﻿/*--------------------------------*/
+/*				sendMessageBox 　　			*/
+/*--------------------------------*/
+
+div#sendMessageBox{
+	float: left;
+	width: 600px;
+}
+
+ div#sendMessageBox dl{
+  width: 595px;
+ }
+
+	div#sendMessageBox dl dt,
+	div#showBox dl dd{
+		padding: 10px 0;
+	}
+
+	div#sendMessageBox dl dt{
+		float:left;
+		width:150px;
+		clear:both;
+	}
+
+	div#sendMessageBox dl dd{
+		width:410px;
+		margin-left:75px;
+		padding-left: 20px;
+	}
+
+/*--------------------------------*/
+/*				messageBox      　			*/
+/*--------------------------------*/
+
+
+div#messageBox{
+	float: left;
+	width: 600px;
+}
+
+div#messageBox dl{
+ width: 595px;
+}
+
+div#messageBox dl dt,
+div#messageBox dl dd{
+	padding: 10px 0;
+}
+
+div#messageBox dl dt{
+	float:left;
+	width:150px;
+	clear:both;
+}
+
+div#messageBox dl dd{
+	width:410x;
+	margin-left:75px;
+	padding-left: 20px;
+}
+
+
+span#send{
+	width: 150px;
+}
+
+/*--------------------------------*/
+/*				searchBox     　　			*/
+/*--------------------------------*/
+
+div#searchBox{
+	float: left;
+	width: 600px;
+}
+
+ div#searchBox dl{
+  width: 595px;
+ }
+
+	div#searchBox dl dt,
+	div#searchBox dl dd{
+		padding: 10px 0;
+	}
+
+	div#searchBox dl dt{
+		float:left;
+		width:150px;
+		clear:both;
+	}
+
+	div#searchBox dl dd{
+		width:410px;
+		margin-left:75px;
+		padding-left: 20px;
+	}
+
+
+
+
+
+/*--------------------------------*/
+/*				userArticleBox    			*/
+/*--------------------------------*/
+
+
+
+	div#usersArticleBox dl{
+		width: 595px;
+	}
+
+	div#usersArticleBox dl dt,
+	div#usersArticleBox dl dd{
+		padding: 10px 0;
+		border-bottom: 1px solid #ddd;
+	}
+
+	div#usersArticleBox dl dt{
+		float:left;
+		width:250px;
+		clear:both;
+		background: url(bg_boder.gif) repeat 0 0 ;
+	}
+
+	div#usersArticleBox dl dd {
+		width:410px;
+		margin-left:75px;
+		padding-left: 10px;
+	}
+
+  div#usersArticleBox dl dd a{
+		width: 350px;
+		padding-left: 10px;
+  }
+
+/*--------------------------------*/
+/*			    	newBox         			*/
+/*--------------------------------*/
+
+div#newBox{
+	float: left;
+	width: 600px;
+}
+
+ div#newBox dl{
+  width: 595px;
+ }
+
+	div#newBox dl dt,
+	div#newBox dl dd{
+		padding: 10px 0;
+	}
+
+	div#newBox dl dt{
+		float:left;
+		width:50px;
+		clear:both;
+	}
+
+	div#newBox dl dd{
+		width:500px;
+		margin-left:75px;
+		padding-left: 20px;
+	}
+
+
+/*--------------------------------*/
+/*			    	showBox        			*/
+/*--------------------------------*/
+
+div#showBox{
+	float: left;
+	width: 600px;
+}
+
+ div#showsBox dl{
+  width: 595px;
+ }
+
+	div#showBox dl dt,
+	div#showBox dl dd{
+		padding: 10px 0;
+	}
+
+	div#showBox dl dt{
+		float:left;
+		width:150px;
+		clear:both;
+	}
+
+	div#showBox dl dd{
+		width:410px;
+		margin-left:75px;
+		padding-left: 20px;
+	}
+
+
+/*--------------------------------*/
+/*			    	errorBox       			*/
+/*--------------------------------*/
+
+
+div#errorBox h3{
+	color: white;
+	background-color: red;
+}
+
+div#errorBox ul li{
+	color: red;
+}
+

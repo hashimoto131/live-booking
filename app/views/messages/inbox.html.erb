@@ -1,0 +1,19 @@
+﻿<div id="messageBox">
+
+  <h2>メッセージリスト</h2>
+	<h5><%=link_to "受信ボックス", inbox_messages_path %></h5>
+  <h5><%=link_to "送信ボックス", outbox_messages_path %></h5>
+
+
+ 	<h2>受信ボックス</h2>
+	<dl class="clearfix">
+	<% @reception_messages.each do |res| %>
+		<dt><%= res.updated_at.strftime("%Y/%m/%d %H:%M:%S") %></dt>
+		<dd><a href="/messages/<%= res.id %>"><%= res.title %></a><span id="send">送信者：<%= res.user.name%></span></dd>
+	<% end %>
+	</dl>
+	<div class="clearfix">
+  	<%= paginate(@reception_messages) %>
+  </div>
+</div>
+

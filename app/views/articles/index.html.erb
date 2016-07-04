@@ -1,0 +1,40 @@
+<div id="mainImgBox">
+	<div id="mainMessageBox">
+		<strong>素敵な出会いをあなたに</strong>
+		<span>さぁ、ライブをはじめよう。</span>
+	</div>
+</div>
+
+<div id="outlineBox">
+	<h2>マイページ</h2>
+	<dl>
+  <% if user_signed_in? %>
+    <%= image_tag current_user.avatar, :size => "200x250", :align => "center" %>
+   	<dt><%= current_user.name %>さん</dt>
+		<dd><%= link_to "メッセージリスト",  messages_path %></dd>
+		<dd><a href="/users/<%= current_user.id %>">記事の管理</a></dd>
+		<dd><%= link_to "プロフィールの管理", edit_user_registration_path %></dd>
+		<dd><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></dd>
+	<% else %>
+	  <dd><%= link_to "ログイン",  new_user_session_path %></dd>
+		<dd><%= link_to "新規登録",  new_user_registration_path %></dd>
+	<% end %>
+	</dl>
+</div>
+
+<div id="conceptBox">
+	<h2>当サイトについて</h2>
+  <span>バンドをはじめたばかりの方にとって、出演できるライブイベントを探すのは大変なこと。<br>
+        また、イベンターの方にとっても出演者を集める為のPRに苦労していることでしょう。<br>
+	     	当サイトでは、そんな方々のお役に立てるような、ライブにブッキングを手助けしています。</span>
+</div>
+
+<div id="topicsBox">
+	<h2>新着記事</h2>
+	<dl class="clearfix">
+	<% @articles.each do |article| %>
+		<dt><%= article.updated_at.strftime("%Y/%m/%d %H:%M:%S") %></dt>
+		<dd><a href="/articles/<%= article.id %>"><%= article.title %></a></dd>
+	<% end %>
+	</dl>
+</div>

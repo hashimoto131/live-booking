@@ -1,0 +1,20 @@
+﻿<div id="messageBox">
+
+  <h2>メッセージリスト</h2>
+	<h5><%=link_to "受信ボックス", inbox_messages_path %></h5>
+  <h5><%=link_to "送信ボックス", outbox_messages_path %></h5>
+
+
+  <h2>送信ボックス</h2>
+	<dl class="clearfix">
+	<% @send_messages.each do |send| %>
+		<dt><%= send.updated_at.strftime("%Y/%m/%d %H:%M:%S") %></dt>
+		<dd><a href="/messages/<%= send.id %>"><%= send.title %></a></dd>
+	<% end %>
+	</dl>
+
+  <div class="clearfix">
+  	<%= paginate(@send_messages) %>
+  </div>
+</div>
+
