@@ -1,5 +1,10 @@
 == README
 
+ローカルにクローンした場合、rails consoleから
+Ken.ken_get
+を行い、県名をデータベースに保存して下さい。
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
