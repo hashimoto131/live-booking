@@ -21,7 +21,7 @@
 </div>
 
 <div id="sendMessageBox">
-	<% if current_user %>
+	<% if current_user && current_user.id != @article.user_id %>
 	  <h2>このイベントについてメッセージを送る</h2>
     <dl>
 	  <%= form_tag("/articles/#{@article.id}/messages", method: :post) do %>
