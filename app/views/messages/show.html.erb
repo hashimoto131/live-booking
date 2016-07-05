@@ -11,13 +11,14 @@
 </div>
 
 <div id="sendMessageBox">
-	<% if current_user.id ==  @message.article.user_id %>
+	<% if current_user.id ==  @message.recever_id %>
   	<h2>このメッセージに返信をする</h2>
     <dl>
   	<%= form_tag("/messages", method: :post) do %>
     	<dt>タイトル<input type="text" name="title" size="50" value="RE:<%=@message.title %>"></dt>
      	<dt>本文<textarea name="text" cols="70" rows="20"></textarea></dt>
 		 	<input type="hidden" name="article_id" value="<%= @message.article.id %>">
+      <input type="hidden" name="recever_id" value="<%= @message.user_id %>">
      	<dt><input type="submit" value="返信する"></dt>
    	<% end %>
 		</dl>

@@ -27,6 +27,7 @@
 	  <%= form_tag("/articles/#{@article.id}/messages", method: :post) do %>
 	     <dt>タイトル<input type="text" name="title" size="50" value="『<%=@article.title %>』についての問い合わせ"></dt>
 	     <dt>本文<textarea cols="50" name="text" placeholder="メッセージの記入" cols="70" rows="20"></textarea></dt>
+           <input type="hidden" name="recever_id" value="<%= @article.user_id %>">
 	     <dt><input type="submit" value="メッセージを送る"></dt>
 	  <% end %>
     </dl>
